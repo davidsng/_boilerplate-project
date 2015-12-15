@@ -10,11 +10,11 @@
     "clean": "rm -rf dist",
     "build": "npm run clean && mkdir dist && npm run build-html && npm run build-css && npm run build-js",
     "build-html": "cp index.html dist/index.html",
-    "build-css": "cp game.css dist/game.css",
-    "build-js": "browserify game.js --outfile dist/game.js --transform babelify",
+    "build-css": "cp style.css dist/style.css",
+    "build-js": "browserify app.js --outfile dist/app.js --transform babelify",
     "watch": "npm run build && npm run watch-js & npm run watch-css & npm run start-server",
-    "watch-js": "watchify game.js --outfile dist/game.js --transform babelify --verbose",
-    "watch-css": "watchify game.css --outfile dist/game.css --transform babelify --verbose"
+    "watch-js": "watchify app.js --outfile dist/app.js --transform babelify --verbose",
+    "watch-css": "watchify style.css --outfile dist/style.css --transform babelify --verbose"
   },
   "author": "David Sng",
   "license": "ISC",
